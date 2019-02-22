@@ -18,7 +18,9 @@ exports.seed = function(knex, Promise) {
         {damage_name: 'toxic'},
         {damage_name: 'frost'},
         {damage_name: 'parry'},
+        {damage_name: 'backstab'},
         {damage_name: 'special weapon'},
+        {damage_name: 'weak point'}
       ]);
     });
 };
