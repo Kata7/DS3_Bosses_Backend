@@ -1,13 +1,24 @@
 
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('table_name').del()
+  return knex('DamageTypes').del()
     .then(function () {
       // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
+      return knex('DamageTypes').insert([
+        {damage_name: 'normal'},
+        {damage_name: 'strike'},
+        {damage_name: 'slash'},
+        {damage_name: 'thrust'},
+        {damage_name: 'magic'},
+        {damage_name: 'fire'},
+        {damage_name: 'lightning'},
+        {damage_name: 'dark'},
+        {damage_name: 'bleed'},
+        {damage_name: 'poison'},
+        {damage_name: 'toxic'},
+        {damage_name: 'frost'},
+        {damage_name: 'parry'},
+        {damage_name: 'special weapon'},
       ]);
     });
 };
