@@ -19,6 +19,7 @@ const table = 'Bosses'
 
 app.get('/', (req, res, next) => {
   knex('Bosses')
+  .select('boss_name', 'location_name')
   .join('Locations', 'Bosses.location_id', 'Locations.location_id')
   .then((rows) => res.status(200).send(rows))
   .catch(err => {
